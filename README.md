@@ -38,26 +38,26 @@ Os codigos mencionados você pode encontrá-los em [docker.com](https://www.dock
 
 ### Criação do Diretorio 'meu-docker' e os contêiners
 
-Vamos criar um diretório chamado 'meu-docker' para armazenar nosso projeto Docker:
-1- em seu terminal entre como super usuario, para isso digite=
+Vamos criar um diretório chamado 'meu-docker' para armazenar nosso projeto Docker:     
+1. em seu terminal entre como super usuario, para isso digite=     
 'sudo su' depois coloque a sua senha.
-2- agora para criar um arquivo para armazenar o Projeto Docker digite o seguinte=
+2. agora para criar um arquivo para armazenar o Projeto Docker digite o seguinte=      
 'mkdir meu-docker'.
-3- agora vamos entrar nesse arquivo que acabamos de criar, digite esse codigo=
+3. agora vamos entrar nesse arquivo que acabamos de criar, digite esse codigo=      
 'cd meu-docker'.
-4- Dentro do diretório 'meu-docker' vamos criar um arquivo chamado 'docker-compose.yml', então digite o esse codigo=
+4. Dentro do diretório 'meu-docker' vamos criar um arquivo chamado 'docker-compose.yml', então digite o esse codigo=     
 'nano docker-compose.yml'.
-5- Dentro desse arquivo vamos criar um contêiner onde o codigo estará na parte de (Uso de Variáveis de Ambiente).
-6- Após isso vamos salvar os conteudos escritos dentro de 'nano docker-compose.yml', digite o seguinte comando no teclado=
+5. Dentro desse arquivo vamos criar um contêiner onde o codigo estará na parte de (Uso de Variáveis de Ambiente).
+6. Após isso vamos salvar os conteudos escritos dentro de 'nano docker-compose.yml', digite o seguinte comando no teclado=    
 'Ctrl + O e depois aperte Enter' agora precione 'Ctrl + X' para voltar para a pasta 'meu-docker'.
-7- Agora vamos criar uma pasta chamada 'html', para isso digite o codigo=
+7. Agora vamos criar uma pasta chamada 'html', para isso digite o codigo=    
 'mkdir html'.
-8- Agora vamos entrar nesse arquivo que acabamos de criar, digite esse codigo=
+8. Agora vamos entrar nesse arquivo que acabamos de criar, digite esse codigo=    
 'cd html'.
-9-  Vamos criar dentro de 'html' um arquivo chamado 'index.html', então digite o esse codigo=
+9.  Vamos criar dentro de 'html' um arquivo chamado 'index.html', então digite o esse codigo=    
 'nano index.html'.
-10- 
-11- Agora vamos salvar os conteudos escritos dentro de 'nano index.html', digite o seguinte comando no teclado=
+10. 
+11. Agora vamos salvar os conteudos escritos dentro de 'nano index.html', digite o seguinte comando no teclado=    
 'Ctrl + O e depois aperte Enter' agora precione 'Ctrl + X' para voltar para a pasta 'meu-docker'.
 
 ## Uso de Variáveis de Ambiente
@@ -85,8 +85,10 @@ O contêiner Nginx é responsável por servir páginas HTML. Aqui estão algumas
 - Ambos os contêineres (bank e web) estão conectados à rede Docker chamada 'mynetwork'.
 
 Isso permite a comunicação entre os contêineres, se necessário.
+
+## Codigos dos Contêineres
   
-  Para configurá-las, crie um arquivo `.env` no diretório do seu projeto com as seguintes variáveis:
+  Aqui está o codigo que utilizei para o contêner dentro do arquivo 'docker-compose.yml':
 
 ```env
 version: '3'
@@ -122,18 +124,80 @@ networks:
 ```
 
 # Codigo Html:
+Aqui está o codigo que utilizei para o contêner dentro do arquivo 'index.html':
 ```
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site</title>
+    <title>Docker</title>
+    <style>
+        /* Estilos para o cabeçalho (h1) */
+        header h1 {
+            color: blue;
+            font-size: 24px;
+        }
+
+        /* Estilos para a barra de navegação (nav) */
+        nav {
+            background-color: #333;
+            color: white;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+        }
+
+        /* Estilos para o conteúdo principal (main) */
+        main {
+            margin: 20px;
+        }
+
+        h2 {
+            color: green;
+        }
+
+        /* Estilos para o rodapé (footer) */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Bem-vindo ao Meu Site!</h1>
-    <p>Esta é a página inicial.</p>
+    <header>
+        <h1>Bem-vindo à Minha Página web pelo docker</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Página Inicial</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Sobre Nós</h2>
+        <p>Somos uma empresa fictícia dedicada a demonstrações de HTML.</p>
+    </main>
+    <footer>
+        <p>&copy; 2023 Minha Empresa</p>
+    </footer>
 </body>
 </html>
 
 ```
+
