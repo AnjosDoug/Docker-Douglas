@@ -36,6 +36,30 @@ e o segundo contêiner será composto por um servidor de banco de dados MySQL.
 
 Os codigos mencionados você pode encontrá-los em [docker.com](https://www.docker.com/get-started).
 
+### Criação do Diretorio 'meu-docker' e os contêiners
+
+Vamos criar um diretório chamado 'meu-docker' para armazenar nosso projeto Docker:
+1- em seu terminal entre como super usuario, para isso digite=
+'sudo su' depois coloque a sua senha.
+2- agora para criar um arquivo para armazenar o Projeto Docker digite o seguinte=
+'mkdir meu-docker'.
+3- agora vamos entrar nesse arquivo que acabamos de criar, digite esse codigo=
+'cd meu-docker'.
+4- Dentro do diretório 'meu-docker' vamos criar um arquivo chamado 'docker-compose.yml', então digite o esse codigo=
+'nano docker-compose.yml'.
+5- Dentro desse arquivo vamos criar um contêiner onde o codigo estará na parte de (Uso de Variáveis de Ambiente).
+6- Após isso vamos salvar os conteudos escritos dentro de 'nano docker-compose.yml', digite o seguinte comando no teclado=
+'Ctrl + O e depois aperte Enter' agora precione 'Ctrl + X' para voltar para a pasta 'meu-docker'.
+7- Agora vamos criar uma pasta chamada 'html', para isso digite o codigo=
+'mkdir html'.
+8- Agora vamos entrar nesse arquivo que acabamos de criar, digite esse codigo=
+'cd html'.
+9-  Vamos criar dentro de 'html' um arquivo chamado 'index.html', então digite o esse codigo=
+'nano index.html'.
+10- 
+11- Agora vamos salvar os conteudos escritos dentro de 'nano index.html', digite o seguinte comando no teclado=
+'Ctrl + O e depois aperte Enter' agora precione 'Ctrl + X' para voltar para a pasta 'meu-docker'.
+
 ## Uso de Variáveis de Ambiente
 
 O aplicativo utiliza variáveis de ambiente para configurar os contêineres, 
@@ -95,7 +119,21 @@ services:
 
 networks:
   mynetwork:
+```
 
+# Codigo Html:
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site</title>
+</head>
+<body>
+    <h1>Bem-vindo ao Meu Site!</h1>
+    <p>Esta é a página inicial.</p>
+</body>
+</html>
 
-
-
+```
