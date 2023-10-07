@@ -56,8 +56,8 @@ Vamos criar um diretório chamado 'meu-docker' para armazenar nosso projeto Dock
 'cd html'.
 9.  Vamos criar dentro de 'html' um arquivo chamado 'index.html', então digite o esse codigo=    
 'nano index.html'.
-10. 
-11. Agora vamos salvar os conteudos escritos dentro de 'nano index.html', digite o seguinte comando no teclado=    
+10. O codigo HTML estará em codigos dos Contêineres mais em baixo na documentação.
+11. Após escrever os codigos HTML vamos salvar os conteudos escritos dentro de 'nano index.html', digite o seguinte comando no teclado=    
 'Ctrl + O e depois aperte Enter' agora precione 'Ctrl + X' para voltar para a pasta 'meu-docker'.
 
 ## Uso de Variáveis de Ambiente
@@ -123,7 +123,7 @@ networks:
   mynetwork:
 ```
 
-# Codigo Html:
+### Codigo Html:
 Aqui está o codigo que utilizei para o contêner dentro do arquivo 'index.html':
 ```
 <!DOCTYPE html>
