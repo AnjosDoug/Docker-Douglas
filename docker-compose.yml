@@ -1,0 +1,32 @@
+version: '3'
+services:
+  bank:
+    image: mysql:latest
+    container_name: bank
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 123321
+      MYSQL_DATABASE: mariaab
+      MYSQL_USER: anjos
+      MYSQL_PASSWORD: 123
+    volumes:
+        - ./data:/var/lib/mysql
+        - ./pessoa.sql:/docker-entrypoint-initdb.d/pessoa.sql
+    networks:
+      - mynetwork
+
+  web:
+    image: nginx:latest
+    container_name: persister
+    ports:
+      - "8080:80"
+    volumes:
+        - ./html:/usr/share/nginx/html
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+
+
