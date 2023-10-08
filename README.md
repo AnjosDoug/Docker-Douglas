@@ -59,6 +59,13 @@ Vamos criar um diretório chamado 'meu-docker' para armazenar nosso projeto Dock
 10. O codigo HTML estará em codigos dos Contêineres mais em baixo na documentação.
 11. Após escrever os codigos HTML vamos salvar os conteudos escritos dentro de 'nano index.html', digite o seguinte comando no teclado=    
 'Ctrl + O e depois aperte Enter' agora precione 'Ctrl + X' para voltar para a pasta 'meu-docker'.
+12. Agora digite o codigo para voltar para a pasta 'meu-docker'=
+'cd ..'.
+13. Feito isso vamos rodar o projeto colocando o seguinte codigo=
+'docker-compose up'.
+14. Agora vamos para o navegador de sua preferecia e digite o seguinte comando=
+'http://localhost:8080'.
+E pronto, o navegador abrirar o html direto na tela.
 
 ## Uso de Variáveis de Ambiente
 
